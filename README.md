@@ -1,5 +1,5 @@
 # sand-drift
-This CDO code presents that how to use the ERA5-Land reanalysis product with high spatiotemporal resolution (0.1° resolution, 1 hour) to calculate the yearly sand drift, and heterogenous sand drift could be used to assess the suitability of other infrastructures of wind and solar farms, traffic engineering, petroleum exploitation and irrigated farming in dune fields.
+These CDO codes present that how to use the ERA5-Land reanalysis product with high spatiotemporal resolution (0.1° resolution, 1 hour) to calculate the yearly sand drift, and heterogenous sand drift could be used to assess the suitability of other infrastructures of wind and solar farms, traffic engineering, petroleum exploitation and irrigated farming in dune fields.
 
 
 Formula:
