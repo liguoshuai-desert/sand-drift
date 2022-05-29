@@ -15,8 +15,8 @@ cdo setrtomiss,0,5.9999999 era5_land_WS_“$common_year”.nc era5_land_WS_setrt
 cdo ifthen era5_land_WS_setrtomiss_“$common_year”.nc era5_land_WD_“$common_year”.nc era5_land_WD_ifthen_“$common_year”.nc
 
 #distinguish the azimuth of sand-moving wind directions
-#N, 78.75≤N＜101.25
-cdo setvrange,78.75,101.2499999 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_N_“$common_year”.nc
+#N, -11.25≤N＜11.25
+cdo setvrange,-11.25,11.2499999 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_N_“$common_year”.nc
 #mask sand-moving wind speeds in the N azimuth
 cdo ifthen era5_land_WD_ifthen_setvrange_N_“$common_year”.nc era5_land_WS_setrtomiss_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_N_“$common_year”.nc
 #2 m/s bins of sand-moving wind speeds in the N azimuth, 6m/s≤WS＜8m/s, 8m/s≤WS＜10m/s, 10m/s≤WS＜12m/s, 12m/s≤WS＜14m/s, 14m/s≤WS＜16m/s, 16m/s≤WS＜18m/s, 18m/s≤WS＜20m/s, 20m/s≤WS＜22m/s, 22m/s≤WS＜24m/s, 24m/s≤WS＜26m/s, 26m/s≤WS＜28m/s, 28m/s≤WS＜30m/s, 30m/s≤WS＜32m/s, 32m/s≤WS<34m/s, 34m/s≤WS
@@ -94,8 +94,8 @@ cdo enssum era5_land_DP_N_range6_8_“$common_year”.nc era5_land_DP_N_range8_1
 #change variable name into DP_N, in order to be used in the resultanting 
 cdo chname,WS,DP_N era5_land_DP_N_range_enssum_“$common_year”.nc era5_land_DP_N_range_enssum_chname_“$common_year”.nc
 
-#NNE, 56.25≤NNE＜78.75
-cdo setvrange,56.25,78.7499999 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_NNE_“$common_year”.nc
+#NNE, 11.25≤NNE＜33.75
+cdo setvrange,11.25,33.7499999 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_NNE_“$common_year”.nc
 #mask sand-moving wind speeds in the NNE azimuth
 cdo ifthen era5_land_WD_ifthen_setvrange_NNE_“$common_year”.nc era5_land_WS_setrtomiss_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_NNE_“$common_year”.nc
 #2 m/s bins of sand-moving wind speeds in the NNE azimuth, 6m/s≤WS＜8m/s, 8m/s≤WS＜10m/s, 10m/s≤WS＜12m/s, 12m/s≤WS＜14m/s, 14m/s≤WS＜16m/s, 16m/s≤WS＜18m/s, 18m/s≤WS＜20m/s, 20m/s≤WS＜22m/s, 22m/s≤WS＜24m/s, 24m/s≤WS＜26m/s, 26m/s≤WS＜28m/s, 28m/s≤WS＜30m/s, 30m/s≤WS＜32m/s, 32m/s≤WS<34m/s, 34m/s≤WS
@@ -252,8 +252,8 @@ cdo enssum era5_land_DP_NE_range6_8_“$common_year”.nc era5_land_DP_NE_range8
 #change variable name into DP_NE, in order to be used in the resultanting 
 cdo chname,WS,DP_NE era5_land_DP_NE_range_enssum_“$common_year”.nc era5_land_DP_NE_range_enssum_chname_“$common_year”.nc
 
-#ENE, 11.25≤ENE＜33.75
-cdo setvrange,11.25,33.7499999 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_ENE_“$common_year”.nc
+#ENE, 56.25≤ENE＜78.75
+cdo setvrange,56.25,78.7499999 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_ENE_“$common_year”.nc
 #mask sand-moving wind speeds in the ENE azimuth
 cdo ifthen era5_land_WD_ifthen_setvrange_ENE_“$common_year”.nc era5_land_WS_setrtomiss_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_ENE_“$common_year”.nc
 #2 m/s bins of sand-moving wind speeds in the ENE azimuth, 6m/s≤WS＜8m/s, 8m/s≤WS＜10m/s, 10m/s≤WS＜12m/s, 12m/s≤WS＜14m/s, 14m/s≤WS＜16m/s, 16m/s≤WS＜18m/s, 18m/s≤WS＜20m/s, 20m/s≤WS＜22m/s, 22m/s≤WS＜24m/s, 24m/s≤WS＜26m/s, 26m/s≤WS＜28m/s, 28m/s≤WS＜30m/s, 30m/s≤WS＜32m/s, 32m/s≤WS<34m/s, 34m/s≤WS
@@ -332,8 +332,8 @@ cdo enssum era5_land_DP_ENE_range6_8_“$common_year”.nc era5_land_DP_ENE_rang
 #change variable name into DP_ENE, in order to be used in the resultanting 
 cdo chname,WS,DP_ENE era5_land_DP_ENE_range_enssum_“$common_year”.nc era5_land_DP_ENE_range_enssum_chname_“$common_year”.nc
 
-#E, -11.25≤E<11.25
-cdo setvrange,-11.25,11.2499999 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_E_“$common_year”.nc
+#E, 78.75≤E＜101.25
+cdo setvrange,78.75≤E＜101.25 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_E_“$common_year”.nc
 #mask sand-moving wind speeds in the E azimuth
 cdo ifthen era5_land_WD_ifthen_setvrange_E_“$common_year”.nc era5_land_WS_setrtomiss_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_E_“$common_year”.nc
 #2 m/s bins of sand-moving wind speeds in the E azimuth, 6m/s≤WS＜8m/s, 8m/s≤WS＜10m/s, 10m/s≤WS＜12m/s, 12m/s≤WS＜14m/s, 14m/s≤WS＜16m/s, 16m/s≤WS＜18m/s, 18m/s≤WS＜20m/s, 20m/s≤WS＜22m/s, 22m/s≤WS＜24m/s, 24m/s≤WS＜26m/s, 26m/s≤WS＜28m/s, 28m/s≤WS＜30m/s, 30m/s≤WS＜32m/s, 32m/s≤WS<34m/s, 34m/s≤WS
@@ -412,8 +412,8 @@ cdo enssum era5_land_DP_E_range6_8_“$common_year”.nc era5_land_DP_E_range8_1
 cdo chname,WS,DP_E era5_land_DP_E_range_enssum_“$common_year”.nc era5_land_DP_E_range_enssum_chname_“$common_year”.nc
 
 
-#ESE, -33.75≤ESE＜-11.25
-cdo setvrange,-33.75,-11.2500001 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_ESE_“$common_year”.nc
+#ESE, 101.25≤ESE＜123.75
+cdo setvrange,101.25,123.7499999 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_ESE_“$common_year”.nc
 #mask sand-moving wind speeds in the ESE azimuth
 cdo ifthen era5_land_WD_ifthen_setvrange_ESE_“$common_year”.nc era5_land_WS_setrtomiss_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_ESE_“$common_year”.nc
 #2 m/s bins of sand-moving wind speeds in the ESE azimuth, 6m/s≤WS＜8m/s, 8m/s≤WS＜10m/s, 10m/s≤WS＜12m/s, 12m/s≤WS＜14m/s, 14m/s≤WS＜16m/s, 16m/s≤WS＜18m/s, 18m/s≤WS＜20m/s, 20m/s≤WS＜22m/s, 22m/s≤WS＜24m/s, 24m/s≤WS＜26m/s, 26m/s≤WS＜28m/s, 28m/s≤WS＜30m/s, 30m/s≤WS＜32m/s, 32m/s≤WS<34m/s, 34m/s≤WS
@@ -492,8 +492,8 @@ cdo enssum era5_land_DP_ESE_range6_8_“$common_year”.nc era5_land_DP_ESE_rang
 cdo chname,WS,DP_ESE era5_land_DP_ESE_range_enssum_“$common_year”.nc era5_land_DP_ESE_range_enssum_chname_“$common_year”.nc
 
 
-#SE, -56.25≤SE＜-33.75
-cdo setvrange,-56.25,-33.7500001 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_SE_“$common_year”.nc
+#SE, 123.75≤SE＜146.25
+cdo setvrange,123.75,146.2499999 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_SE_“$common_year”.nc
 #mask sand-moving wind speeds in the SE azimuth
 cdo ifthen era5_land_WD_ifthen_setvrange_SE_“$common_year”.nc era5_land_WS_setrtomiss_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_SE_“$common_year”.nc
 #2 m/s bins of sand-moving wind speeds in the SE azimuth, 6m/s≤WS＜8m/s, 8m/s≤WS＜10m/s, 10m/s≤WS＜12m/s, 12m/s≤WS＜14m/s, 14m/s≤WS＜16m/s, 16m/s≤WS＜18m/s, 18m/s≤WS＜20m/s, 20m/s≤WS＜22m/s, 22m/s≤WS＜24m/s, 24m/s≤WS＜26m/s, 26m/s≤WS＜28m/s, 28m/s≤WS＜30m/s, 30m/s≤WS＜32m/s, 32m/s≤WS<34m/s, 34m/s≤WS
@@ -572,8 +572,8 @@ cdo enssum era5_land_DP_SE_range6_8_“$common_year”.nc era5_land_DP_SE_range8
 cdo chname,WS,DP_SE era5_land_DP_SE_range_enssum_“$common_year”.nc era5_land_DP_SE_range_enssum_chname_“$common_year”.nc
 
 
-#SSE, -78.75≤SSE＜-56.25
-cdo setvrange,-78.75,-56.2500001 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_SSE_“$common_year”.nc
+#SSE, 146.25≤SSE＜168.75
+cdo setvrange,146.25,168.7499999 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_SSE_“$common_year”.nc
 #mask sand-moving wind speeds in the SSE azimuth
 cdo ifthen era5_land_WD_ifthen_setvrange_SSE_“$common_year”.nc era5_land_WS_setrtomiss_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_SSE_“$common_year”.nc
 #2 m/s bins of sand-moving wind speeds in the SSE azimuth, 6m/s≤WS＜8m/s, 8m/s≤WS＜10m/s, 10m/s≤WS＜12m/s, 12m/s≤WS＜14m/s, 14m/s≤WS＜16m/s, 16m/s≤WS＜18m/s, 18m/s≤WS＜20m/s, 20m/s≤WS＜22m/s, 22m/s≤WS＜24m/s, 24m/s≤WS＜26m/s, 26m/s≤WS＜28m/s, 28m/s≤WS＜30m/s, 30m/s≤WS＜32m/s, 32m/s≤WS<34m/s, 34m/s≤WS
@@ -652,10 +652,10 @@ cdo enssum era5_land_DP_SSE_range6_8_“$common_year”.nc era5_land_DP_SSE_rang
 cdo chname,WS,DP_SSE era5_land_DP_SSE_range_enssum_“$common_year”.nc era5_land_DP_SSE_range_enssum_chname_“$common_year”.nc
 
 
-#S, -101.25≤S＜-78.75
-cdo setvrange,-101.25,-78.7500001 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_S_“$common_year”.nc
+#S, -180＜S＜-168.75, 168.75≤S≤180, note that here uses setrtomiss
+cdo setrtomiss,-168.75,168.7499999 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setrtomiss_S_“$common_year”.nc
 #mask sand-moving wind speeds in the S azimuth
-cdo ifthen era5_land_WD_ifthen_setvrange_S_“$common_year”.nc era5_land_WS_setrtomiss_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_S_“$common_year”.nc
+cdo ifthen era5_land_WD_ifthen_setrtomiss_S_“$common_year”.nc era5_land_WS_setrtomiss_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_S_“$common_year”.nc
 #2 m/s bins of sand-moving wind speeds in the S azimuth, 6m/s≤WS＜8m/s, 8m/s≤WS＜10m/s, 10m/s≤WS＜12m/s, 12m/s≤WS＜14m/s, 14m/s≤WS＜16m/s, 16m/s≤WS＜18m/s, 18m/s≤WS＜20m/s, 20m/s≤WS＜22m/s, 22m/s≤WS＜24m/s, 24m/s≤WS＜26m/s, 26m/s≤WS＜28m/s, 28m/s≤WS＜30m/s, 30m/s≤WS＜32m/s, 32m/s≤WS<34m/s, 34m/s≤WS
 cdo histcount,6,7.9999999,9.9999999,11.9999999,13.9999999,15.9999999,17.9999999,19.9999999,21.9999999,23.9999999,25.9999999,27.9999999,29.9999999,31.9999999,33.9999999,inf era5_land_WS_setrtomiss_ifthen_S_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_S_histcount_“$common_year”.nc
 #the sand-moving wind frequency in the S azimuth, 8760 is the total hours for the “$common_year”
@@ -732,8 +732,8 @@ cdo enssum era5_land_DP_S_range6_8_“$common_year”.nc era5_land_DP_S_range8_1
 cdo chname,WS,DP_S era5_land_DP_S_range_enssum_“$common_year”.nc era5_land_DP_S_range_enssum_chname_“$common_year”.nc
 
 
-#SSW, -123.75≤SSW＜-101.25
-cdo setvrange,-123.75,-101.2500001 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_SSW_“$common_year”.nc
+#SSW, -168.75≤SSW＜-146.25
+cdo setvrange,-168.75,-146.2500001 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_SSW_“$common_year”.nc
 #mask sand-moving wind speeds in the SSW azimuth
 cdo ifthen era5_land_WD_ifthen_setvrange_SSW_“$common_year”.nc era5_land_WS_setrtomiss_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_SSW_“$common_year”.nc
 #2 m/s bins of sand-moving wind speeds in the SSW azimuth, 6m/s≤WS＜8m/s, 8m/s≤WS＜10m/s, 10m/s≤WS＜12m/s, 12m/s≤WS＜14m/s, 14m/s≤WS＜16m/s, 16m/s≤WS＜18m/s, 18m/s≤WS＜20m/s, 20m/s≤WS＜22m/s, 22m/s≤WS＜24m/s, 24m/s≤WS＜26m/s, 26m/s≤WS＜28m/s, 28m/s≤WS＜30m/s, 30m/s≤WS＜32m/s, 32m/s≤WS<34m/s, 34m/s≤WS
@@ -893,8 +893,8 @@ cdo enssum era5_land_DP_SW_range6_8_“$common_year”.nc era5_land_DP_SW_range8
 cdo chname,WS,DP_SW era5_land_DP_SW_range_enssum_“$common_year”.nc era5_land_DP_SW_range_enssum_chname_“$common_year”.nc
 
 
-#WSW, -168.75≤WSW＜-146.25
-cdo setvrange,-168.75,-146.2500001 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_WSW_“$common_year”.nc
+#WSW, -123.75≤WSW＜-101.25
+cdo setvrange,-123.75,-101.2500001 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_WSW_“$common_year”.nc
 #mask sand-moving wind speeds in the WSW azimuth
 cdo ifthen era5_land_WD_ifthen_setvrange_WSW_“$common_year”.nc era5_land_WS_setrtomiss_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_WSW_“$common_year”.nc
 #2 m/s bins of sand-moving wind speeds in the WSW azimuth, 6m/s≤WS＜8m/s, 8m/s≤WS＜10m/s, 10m/s≤WS＜12m/s, 12m/s≤WS＜14m/s, 14m/s≤WS＜16m/s, 16m/s≤WS＜18m/s, 18m/s≤WS＜20m/s, 20m/s≤WS＜22m/s, 22m/s≤WS＜24m/s, 24m/s≤WS＜26m/s, 26m/s≤WS＜28m/s, 28m/s≤WS＜30m/s, 30m/s≤WS＜32m/s, 32m/s≤WS<34m/s, 34m/s≤WS
@@ -973,18 +973,18 @@ cdo enssum era5_land_DP_WSW_range6_8_“$common_year”.nc era5_land_DP_WSW_rang
 cdo chname,WS,DP_WSW era5_land_DP_WSW_range_enssum_“$common_year”.nc era5_land_DP_WSW_range_enssum_chname_“$common_year”.nc
 
 
-#W, -180≤W＜-168.75, 168.75≤W＜180, note that here uses setrtomiss
-cdo setrtomiss,-168.75,168.7499999 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setrtomiss_W_“$common_year”.nc
+#W, -101.25≤W＜-78.75
+cdo setvrange,-101.25,-78.7500001 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_W_“$common_year”.nc
 #mask sand-moving wind speeds in the W azimuth
-cdo ifthen era5_land_WD_ifthen_setrtomiss_W_“$common_year”.nc era5_land_WS_setrtomiss_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_“$common_year”.nc
+cdo ifthen era5_land_WD_ifthen_setvrange_W_“$common_year”.nc era5_land_WS_setvrange_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_“$common_year”.nc
 #2 m/s bins of sand-moving wind speeds in the W azimuth, 6m/s≤WS＜8m/s, 8m/s≤WS＜10m/s, 10m/s≤WS＜12m/s, 12m/s≤WS＜14m/s, 14m/s≤WS＜16m/s, 16m/s≤WS＜18m/s, 18m/s≤WS＜20m/s, 20m/s≤WS＜22m/s, 22m/s≤WS＜24m/s, 24m/s≤WS＜26m/s, 26m/s≤WS＜28m/s, 28m/s≤WS＜30m/s, 30m/s≤WS＜32m/s, 32m/s≤WS<34m/s, 34m/s≤WS
-cdo histcount,6,7.9999999,9.9999999,11.9999999,13.9999999,15.9999999,17.9999999,19.9999999,21.9999999,23.9999999,25.9999999,27.9999999,29.9999999,31.9999999,33.9999999,inf era5_land_WS_setrtomiss_ifthen_W_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_“$common_year”.nc
+cdo histcount,6,7.9999999,9.9999999,11.9999999,13.9999999,15.9999999,17.9999999,19.9999999,21.9999999,23.9999999,25.9999999,27.9999999,29.9999999,31.9999999,33.9999999,inf era5_land_WS_setvrange_ifthen_W_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_“$common_year”.nc
 #the sand-moving wind frequency in the W azimuth, 8760 is the total hours for the “$common_year”
-cdo divc,8760 era5_land_WS_setrtomiss_ifthen_W_histcount_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc
+cdo divc,8760 era5_land_WS_setvrange_ifthen_W_histcount_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc
 #setmisstoc
-cdo setmisstoc,0 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_setmisstoc_“$common_year”.nc
+cdo setmisstoc,0 era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_setmisstoc_“$common_year”.nc
 #mulc
-cdo mulc,100 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_setmisstoc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_setmisstoc_mulc_“$common_year”.nc
+cdo mulc,100 era5_land_WS_setvrange_ifthen_W_histcount_divc_setmisstoc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_setmisstoc_mulc_“$common_year”.nc
 #weighting factor v^2(v-vt), v is the mean wind speed，and they are 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 34m/s, respectively; and m/s needs to be conversed into knot
 #level,6 v^2(v-vt)=(7*3600/1852)*(7*3600/1852)*(7*3600/1852-6*3600/1852)=359.8989961
 #level,8 v^2(v-vt)=(9*3600/1852)*(9*3600/1852)*(9*3600/1852-6*3600/1852)=1784.8052258
@@ -1003,58 +1003,58 @@ cdo mulc,100 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_setmisstoc_“$comm
 #level,34 v^2(v-vt)=(34*3600/1852)*(34*3600/1852)*(34*3600/1852-6*3600/1852)=237738.9940260
 #1 knot = 1 nautical mile/hour =1852m/hour=1852/3600m/s=0.5144m/s
 #sellevel6
-cdo -mulc,359.8989961 -sellevel,6 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel6_“$common_year”.nc
-cdo setmisstoc,0 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel6_“$common_year”.nc era5_land_DP_W_range6_8_“$common_year”.nc
+cdo -mulc,359.8989961 -sellevel,6 era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel6_“$common_year”.nc
+cdo setmisstoc,0 era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel6_“$common_year”.nc era5_land_DP_W_range6_8_“$common_year”.nc
 #sellevel8
-cdo -mulc,1784.8052258 -sellevel,8 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel8_“$common_year”.nc
-cdo setmisstoc,0 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel8_“$common_year”.nc era5_land_DP_W_range8_10_“$common_year”.nc
+cdo -mulc,1784.8052258 -sellevel,8 era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel8_“$common_year”.nc
+cdo setmisstoc,0 era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel8_“$common_year”.nc era5_land_DP_W_range8_10_“$common_year”.nc
 #sellevel10
-cdo -mulc,4443.6508708 -sellevel,10 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel10_“$common_year”.nc
-cdo setmisstoc,0 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel10_“$common_year”.nc era5_land_DP_W_range10_12_“$common_year”.nc
+cdo -mulc,4443.6508708 -sellevel,10 era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel10_“$common_year”.nc
+cdo setmisstoc,0 era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel10_“$common_year”.nc era5_land_DP_W_range10_12_“$common_year”.nc
 #sellevel12
-cdo -mulc,8688.9900498 -sellevel,12 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel12_“$common_year”.nc
-cdo setmisstoc,0 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel12_“$common_year”.nc era5_land_DP_W_range12_14_“$common_year”.nc
+cdo -mulc,8688.9900498 -sellevel,12 era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel12_“$common_year”.nc
+cdo setmisstoc,0 era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel12_“$common_year”.nc era5_land_DP_W_range12_14_“$common_year”.nc
 #sellevel14
-cdo -mulc,14873.3768816 -sellevel,14 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel14_“$common_year”.nc
-cdo setmisstoc,0 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel14_“$common_year”.nc era5_land_DP_W_range14_16_“$common_year”.nc
+cdo -mulc,14873.3768816 -sellevel,14 era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel14_“$common_year”.nc
+cdo setmisstoc,0 era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel14_“$common_year”.nc era5_land_DP_W_range14_16_“$common_year”.nc
 #sellevel16
-cdo -mulc,23349.3654847 -sellevel,16 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel16_“$common_year”.nc
-cdo setmisstoc,0 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel16_“$common_year”.nc era5_land_DP_W_range16_18_“$common_year”.nc
+cdo -mulc,23349.3654847 -sellevel,16 era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel16_“$common_year”.nc
+cdo setmisstoc,0 era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel16_“$common_year”.nc era5_land_DP_W_range16_18_“$common_year”.nc
 #sellevel18
-cdo -mulc,34469.5099779 -sellevel,18 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel18_“$common_year”.nc
-cdo setmisstoc,0 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel18_“$common_year”.nc era5_land_DP_W_range18_20_“$common_year”.nc
+cdo -mulc,34469.5099779 -sellevel,18 era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel18_“$common_year”.nc
+cdo setmisstoc,0 era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel18_“$common_year”.nc era5_land_DP_W_range18_20_“$common_year”.nc
 #sellevel20
-cdo -mulc,48586.3644798 -sellevel,20 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel20_“$common_year”.nc
-cdo setmisstoc,0 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel20_“$common_year”.nc era5_land_DP_W_range20_22_“$common_year”.nc
+cdo -mulc,48586.3644798 -sellevel,20 era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel20_“$common_year”.nc
+cdo setmisstoc,0 era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel20_“$common_year”.nc era5_land_DP_W_range20_22_“$common_year”.nc
 #sellevel22
-cdo -mulc,66052.4831091 -sellevel,22 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel22_“$common_year”.nc
-cdo setmisstoc,0 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel22_“$common_year”.nc era5_land_DP_W_range22_24_“$common_year”.nc
+cdo -mulc,66052.4831091 -sellevel,22 era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel22_“$common_year”.nc
+cdo setmisstoc,0 era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel22_“$common_year”.nc era5_land_DP_W_range22_24_“$common_year”.nc
 #sellevel24
-cdo -mulc,87220.4199845 -sellevel,24 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel24_“$common_year”.nc
-cdo setmisstoc,0 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel24_“$common_year”.nc era5_land_DP_W_range24_26_“$common_year”.nc
+cdo -mulc,87220.4199845 -sellevel,24 era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel24_“$common_year”.nc
+cdo setmisstoc,0 era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel24_“$common_year”.nc era5_land_DP_W_range24_26_“$common_year”.nc
 #sellevel26
-cdo -mulc,112442.7292247 -sellevel,26 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel26_“$common_year”.nc
-cdo setmisstoc,0 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel26_“$common_year”.nc era5_land_DP_W_range26_28_“$common_year”.nc
+cdo -mulc,112442.7292247 -sellevel,26 era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel26_“$common_year”.nc
+cdo setmisstoc,0 era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel26_“$common_year”.nc era5_land_DP_W_range26_28_“$common_year”.nc
 #sellevel28
-cdo -mulc,142071.9649483 -sellevel,28 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel28_“$common_year”.nc
-cdo setmisstoc,0 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel28_“$common_year”.nc era5_land_DP_W_range28_30_“$common_year”.nc
+cdo -mulc,142071.9649483 -sellevel,28 era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel28_“$common_year”.nc
+cdo setmisstoc,0 era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel28_“$common_year”.nc era5_land_DP_W_range28_30_“$common_year”.nc
 #sellevel30
-cdo -mulc,176460.6812740 -sellevel,30 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel30_“$common_year”.nc
-cdo setmisstoc,0 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel30_“$common_year”.nc era5_land_DP_W_range30_32_“$common_year”.nc
+cdo -mulc,176460.6812740 -sellevel,30 era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel30_“$common_year”.nc
+cdo setmisstoc,0 era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel30_“$common_year”.nc era5_land_DP_W_range30_32_“$common_year”.nc
 #sellevel32
-cdo -mulc,215961.4323204 -sellevel,32 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel32_“$common_year”.nc
-cdo setmisstoc,0 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel32_“$common_year”.nc era5_land_DP_W_range32_34_“$common_year”.nc
+cdo -mulc,215961.4323204 -sellevel,32 era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel32_“$common_year”.nc
+cdo setmisstoc,0 era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel32_“$common_year”.nc era5_land_DP_W_range32_34_“$common_year”.nc
 #sellevel34
-cdo -mulc,237738.9940260 -sellevel,34 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel34_“$common_year”.nc
-cdo setmisstoc,0 era5_land_WS_setrtomiss_ifthen_W_histcount_divc_sellevel34_“$common_year”.nc era5_land_DP_W_range34_inf_“$common_year”.nc
+cdo -mulc,237738.9940260 -sellevel,34 era5_land_WS_setvrange_ifthen_W_histcount_divc_“$common_year”.nc era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel34_“$common_year”.nc
+cdo setmisstoc,0 era5_land_WS_setvrange_ifthen_W_histcount_divc_sellevel34_“$common_year”.nc era5_land_DP_W_range34_inf_“$common_year”.nc
 #enssum
 cdo enssum era5_land_DP_W_range6_8_“$common_year”.nc era5_land_DP_W_range8_10_“$common_year”.nc era5_land_DP_W_range10_12_“$common_year”.nc era5_land_DP_W_range12_14_“$common_year”.nc era5_land_DP_W_range14_16_“$common_year”.nc era5_land_DP_W_range16_18_“$common_year”.nc era5_land_DP_W_range18_20_“$common_year”.nc era5_land_DP_W_range20_22_“$common_year”.nc era5_land_DP_W_range22_24_“$common_year”.nc era5_land_DP_W_range24_26_“$common_year”.nc era5_land_DP_W_range26_28_“$common_year”.nc era5_land_DP_W_range28_30_“$common_year”.nc era5_land_DP_W_range30_32_“$common_year”.nc era5_land_DP_W_range32_34_“$common_year”.nc era5_land_DP_W_range34_inf_“$common_year”.nc era5_land_DP_W_range_enssum_“$common_year”.nc
 #change variable name into DP_W, in order to be used in the resultanting 
 cdo chname,WS,DP_W era5_land_DP_W_range_enssum_“$common_year”.nc era5_land_DP_W_range_enssum_chname_“$common_year”.nc
 
 
-#WNW, 146.25≤WNW＜168.75
-cdo setvrange,146.25,168.7499999 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_WNW_“$common_year”.nc
+#WNW, -78.75≤WNW＜-56.25
+cdo setvrange,-78.75,-56.2500001 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_WNW_“$common_year”.nc
 #mask sand-moving wind speeds in the WNW azimuth
 cdo ifthen era5_land_WD_ifthen_setvrange_WNW_“$common_year”.nc era5_land_WS_setrtomiss_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_WNW_“$common_year”.nc
 #2 m/s bins of sand-moving wind speeds in the WNW azimuth, 6m/s≤WS＜8m/s, 8m/s≤WS＜10m/s, 10m/s≤WS＜12m/s, 12m/s≤WS＜14m/s, 14m/s≤WS＜16m/s, 16m/s≤WS＜18m/s, 18m/s≤WS＜20m/s, 20m/s≤WS＜22m/s, 22m/s≤WS＜24m/s, 24m/s≤WS＜26m/s, 26m/s≤WS＜28m/s, 28m/s≤WS＜30m/s, 30m/s≤WS＜32m/s, 32m/s≤WS<34m/s, 34m/s≤WS
@@ -1133,8 +1133,8 @@ cdo enssum era5_land_DP_WNW_range6_8_“$common_year”.nc era5_land_DP_WNW_rang
 cdo chname,WS,DP_WNW era5_land_DP_WNW_range_enssum_“$common_year”.nc era5_land_DP_WNW_range_enssum_chname_“$common_year”.nc
 
 
-#NW, 123.75≤NW＜146.25
-cdo setvrange,123.75,146.2499999 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_NW_“$common_year”.nc
+#NW, -56.25≤NW＜-33.75
+cdo setvrange,-56.25,-33.7500001 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_NW_“$common_year”.nc
 #mask sand-moving wind speeds in the NW azimuth
 cdo ifthen era5_land_WD_ifthen_setvrange_NW_“$common_year”.nc era5_land_WS_setrtomiss_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_NW_“$common_year”.nc
 #2 m/s bins of sand-moving wind speeds in the NW azimuth, 6m/s≤WS＜8m/s, 8m/s≤WS＜10m/s, 10m/s≤WS＜12m/s, 12m/s≤WS＜14m/s, 14m/s≤WS＜16m/s, 16m/s≤WS＜18m/s, 18m/s≤WS＜20m/s, 20m/s≤WS＜22m/s, 22m/s≤WS＜24m/s, 24m/s≤WS＜26m/s, 26m/s≤WS＜28m/s, 28m/s≤WS＜30m/s, 30m/s≤WS＜32m/s, 32m/s≤WS<34m/s, 34m/s≤WS
@@ -1213,8 +1213,8 @@ cdo enssum era5_land_DP_NW_range6_8_“$common_year”.nc era5_land_DP_NW_range8
 cdo chname,WS,DP_NW era5_land_DP_NW_range_enssum_“$common_year”.nc era5_land_DP_NW_range_enssum_chname_“$common_year”.nc
 
 
-#NNW, 101.25≤NNW＜123.75
-cdo setvrange,101.25,123.7499999 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_NNW_“$common_year”.nc
+#NNW, -33.75≤NNW＜-11.25
+cdo setvrange,-33.75,-11.2500001 era5_land_WD_ifthen_“$common_year”.nc era5_land_WD_ifthen_setvrange_NNW_“$common_year”.nc
 #mask sand-moving wind speeds in the NNW azimuth
 cdo ifthen era5_land_WD_ifthen_setvrange_NNW_“$common_year”.nc era5_land_WS_setrtomiss_“$common_year”.nc era5_land_WS_setrtomiss_ifthen_NNW_“$common_year”.nc
 #2 m/s bins of sand-moving wind speeds in the NNW azimuth, 6m/s≤WS＜8m/s, 8m/s≤WS＜10m/s, 10m/s≤WS＜12m/s, 12m/s≤WS＜14m/s, 14m/s≤WS＜16m/s, 16m/s≤WS＜18m/s, 18m/s≤WS＜20m/s, 20m/s≤WS＜22m/s, 22m/s≤WS＜24m/s, 24m/s≤WS＜26m/s, 26m/s≤WS＜28m/s, 28m/s≤WS＜30m/s, 30m/s≤WS＜32m/s, 32m/s≤WS<34m/s, 34m/s≤WS
@@ -1315,28 +1315,7 @@ cdo expr,'RDP_E=DP_E-DP_W+(DP_NE+DP_SE-DP_NW-DP_SW)*0.7071068+(DP_ESE+DP_ENE-DP_
 cdo -chname,RDP_E,RDP -sqrt -add -sqr -selname,RDP_E era5_land_DP_range_enssum_chname_merge_exprE_“$common_year”.nc -sqr -selname,RDP_N  era5_land_DP_range_enssum_chname_merge_exprN_“$common_year”.nc era5_land_RDP_“$common_year”.nc
 
 #calculate RDD, Resultant Drift Direction
-cdo -chname,RDP_E,RDD -mulc,57.2957805 -atan2 -mulc,-1 era5_land_DP_range_enssum_chname_merge_exprE_“$common_year”.nc -mulc,-1 era5_land_DP_range_enssum_chname_merge_exprN_“$common_year”.nc era5_land_theta_“$common_year”.nc
-#state 1: adjust angles of [0, 180) into 270-theta 
-cdo setvrange,0,180 era5_land_theta_“$common_year”.nc era5_land_theta_setvrange1_“$common_year”.nc
-cdo mulc,-1 era5_land_theta_setvrange1_“$common_year”.nc era5_land_theta_setvrange1_mulc_“$common_year”.nc
-cdo addc,270 era5_land_theta_setvrange1_mulc_“$common_year”.nc era5_land_theta1_“$common_year”.nc
-cdo setmisstoc,0 era5_land_theta1_“$common_year”.nc era5_land_theta1_setmisstoc_“$common_year”.nc
-#state 2: adjust angles of [-90,0) into 270-theta 
-cdo setvrange,-90,0 era5_land_theta_“$common_year”.nc era5_land_theta_setvrange2_“$common_year”.nc
-cdo mulc,-1 era5_land_theta_setvrange2_“$common_year”.nc era5_land_theta_setvrange2_mulc_“$common_year”.nc
-cdo addc,270 era5_land_theta_setvrange2_mulc_“$common_year”.nc era5_land_theta2_“$common_year”.nc
-cdo setmisstoc,0 era5_land_theta2_“$common_year”.nc era5_land_theta2_setmisstoc_“$common_year”.nc
-#state 3: adjust angles of [-180,-90) into abs(theta)-90 
-cdo setvrange,-180,-90 era5_land_theta_“$common_year”.nc era5_land_theta_setvrange3_“$common_year”.nc
-cdo mulc,-1 era5_land_theta_setvrange3_“$common_year”.nc era5_land_theta_setvrange3_mulc_“$common_year”.nc
-cdo addc,-90 era5_land_theta_setvrange3_mulc_“$common_year”.nc era5_land_theta3_“$common_year”.nc
-cdo setmisstoc,0 era5_land_theta3_“$common_year”.nc era5_land_theta3_setmisstoc_“$common_year”.nc
-
-#add, 3 states combine to one file
-cdo add era5_land_theta1_setmisstoc_“$common_year”.nc era5_land_theta2_setmisstoc_“$common_year”.nc era5_land_theta12_setmisstoc_“$common_year”.nc
-cdo add era5_land_theta12_setmisstoc_“$common_year”.nc era5_land_theta3_setmisstoc_“$common_year”.nc era5_land_theta4_“$common_year”.nc
-#revise 540.000000 into 270.000000
-cdo setrtoc,450,630,270.0000000 era5_land_theta4_“$common_year”.nc era5_land_RDD_“$common_year”.nc
+cdo -chname,RDP_E,RDD -addc,180 -mulc,57.2957805 -atan2 -mulc,-1 era5_land_DP_range_enssum_chname_merge_exprE_“$common_year”.nc -mulc,-1 era5_land_DP_range_enssum_chname_merge_exprN_“
 
 #calculate RDP/DP，WDV, Wind Direction Variablity
 cdo div era5_land_RDP_“$common_year”.nc era5_land_DP_“$common_year”.nc era5_land_WDV_“$common_year”.nc
