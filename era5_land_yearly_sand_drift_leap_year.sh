@@ -1315,7 +1315,7 @@ cdo expr,'RDP_E=DP_E-DP_W+(DP_NE+DP_SE-DP_NW-DP_SW)*0.7071068+(DP_ESE+DP_ENE-DP_
 cdo -chname,RDP_E,RDP -sqrt -add -sqr -selname,RDP_E era5_land_DP_range_enssum_chname_merge_exprE_“$leap_year”.nc -sqr -selname,RDP_N  era5_land_DP_range_enssum_chname_merge_exprN_“$leap_year”.nc era5_land_RDP_“$leap_year”.nc
 
 #calculate RDD, Resultant Drift Direction
-cdo -chname,RDP_E,RDD -addc,180 -mulc,57.2957805 -atan2 -mulc,-1 era5_land_DP_range_enssum_chname_merge_exprE_“$leap_year”.nc -mulc,-1 era5_land_DP_range_enssum_chname_merge_exprN_“
+cdo -chname,RDP_E,RDD -addc,180 -mulc,57.2957805 -atan2 era5_land_DP_range_enssum_chname_merge_exprE_“$leap_year”.nc era5_land_DP_range_enssum_chname_merge_exprN_“$leap_year”.nc era5_land_RDD_“$leap_year”.nc
 
 #calculate RDP/DP，WDV, Wind Direction Variablity
 cdo div era5_land_RDP_“$leap_year”.nc era5_land_DP_“$leap_year”.nc era5_land_WDV_“$leap_year”.nc
