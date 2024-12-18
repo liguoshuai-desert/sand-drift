@@ -1,20 +1,22 @@
 # sand-drift
-These CDO codes present that how to use the ERA5-Land reanalysis product with high spatiotemporal resolution (0.1° and hourly resolution) to calculate the yearly sand drift, and heterogenous sand drift could be used to assess the dune threats to petroleum exploitation, traffic engineering and irrigated farming in dune fields.
+These CDO codes present that how to use the ERA5 (0.25°) and ERA5-Land hourly wind data (0.1°) to calculate the yearly sand drift, and heterogenous sand drift could be used to assess the dune threats to desert engineering.
 
 
 Formula:
 
 The drift potential (DP) in vector units (VU) is calculated by
 
-DPi=∑U^2*[U-Ut]*fu
+DP=∑(U^2*[U-Ut])/100*t
 
-where i represents 16 directions: N, NNE, NE, NEE, E, EES, ES, ESS, S, SSW, WS, WWS, W, WWN, NW and NNW; U is the sand-moving wind speed 5.1 and 5.3 m s-1 (≥5.8 and 6.4 m s-1) at the height of 10 m; Ut is the threshold wind velocity, i.e., the minimum wind velocity at the 10-m height to cause sediment particles in saltation; fu is the fraction of time when the wind speed is higher than Ut. 
+where i represents the 16 wind directions: N, NNE, NE, NEE, E, EES, ES, ESS, S, SSW, WS, WWS, W, WWN, NW and NNW; U is the effective wind speed, which is ≥5.3 m s-1 and ≥5.8 m s-1 at 10 m height; Ut = 5.3 m s-1 and Ut = 5.8 m s-1 are the threshold wind speeds; t is the percentage of time during which the wind speed exceeds Ut. A 2 m s-1 bin is adopted for each direction of effective wind speeds ≥5.3 m s-1 (or ≥5.8 m s-1), corresponding to mean wind speeds of 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32 and 33 m s-1 (7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 and 32 m s-1), and the sum of these bins represents the final DP in each wind direction. Although the DP could be calculated using wind speeds in m s-1, we have expressed the mean wind speeds in knots to avoid recalibrating the classification of wind energy environments (low energy, <200 VU; intermediate energy, ≥200 VU and <400 VU; high energy, ≥400 VU) developed by Fryberger. The conversion factor used is 1 knot = 0.5144 m s-1. The obtained DPs in the 16 wind directions are projected onto the due-east (RDP_E) and due-north (RDP_N) directions to calculate the RDP, RDD and WDV: 
 
-The 2 m s-1 bin is adopted in each direction of effective friction velocity ≥5.1 and 5.3 m s-1 (≥5.8 and 6.4 m s-1), corresponding to the mean friction velocities of 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32 and 33 m s-1 (7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 and 32 m s-1), and the sum of these bins is the final DP in the wind direction. Note that these mean wind speeds have been expressed in knots by the approximate conversion (1 knot = 0.5144 m s-1) to ensure the valid classification of wind energy (low energy, <200 VU; intermediate energy, ≥200 VU and <400 VU; high energy, ≥400 VU) developed by Fryberger  [Fryberger, 1978, 1979; Bullard, 1997]. 
+RDP=sqrt(RDP_E^2+RDP_N^2)
 
-The obtained DPs in the 16 wind directions are projected to the due-north and due-east directions to solve the resultant drift potential (RDP) and the wind directional variation (RDP/DP, referred as WDV). RDP represents the net sand transport potential in the resultant drift direction, which is the net trend of sand drift, in line with the dominated direction of dune migration velocities; WDV reflects the winds coming from the same direction (approximate to 1) or many directions (approximate to 0). 
+RDD=180+57.296atan2⁡(RDP_E⁄RDP_N)
 
-The divisor used for calculating the frequency of sand-moving winds from different directions is the total hour of Julian years (8760 hours for common year or 8784 hours for leap year). 
+WDV=RDP/DP
+
+Here, RDP represents the net sand transport potential in the resultant drift direction (RDD), which corresponds to the net trend of sand drift and is aligned with the dominant direction of dune migration. WDV reflects whether the winds predominantly come from a single direction (approaching 1) or multiple directions (approaching 0). WDV is classified into low ratio (<0.3), intermediate ratio (≥0.3 and <0.8) and high ratio (≥0.8) wind regimes. Low-ratio wind regimes are associated with complex or obtuse bimodal wind patterns, intermediate-ratio wind regimes with either obtuse bimodal or acute bimodal wind patterns, and high-ratio wind regimes with wide or narrow unimodal wind patterns. Notably, low-ratio wind regimes tend to pile up sands and generate large dunes. Finally, the divisor used for calculating the frequency of effective wind speeds from different directions is the total number of hours in a Julian year (8760 hours for common year or 8784 hours for leap year).
 
 
 Bibliography:
