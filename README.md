@@ -1,14 +1,16 @@
 # sand-drift
-These CDO codes present that how to use the ERA5 (0.25°) and ERA5-Land hourly wind data (0.1°) to calculate the yearly sand drift, and heterogenous sand drift could be used to assess the dune threats to desert engineering.
+These CDO codes present that how to use the ERA5 (0.25°) and ERA5-Land (0.1°) hourly wind data to calculate the yearly sand drift, and heterogenous sand drift could be used to assess the dune threats to desert engineering.
 
 
 Formula:
 
+DPi=∑U^2×(U-Ut)/100×t
+
 The drift potential (DP) in vector units (VU) is calculated by
 
-DP=∑(U^2*[U-Ut])/100*t
+where i represents the 16 wind directions (N, NNE, NE, NEE, E, EES, ES, ESS, S, SSW, WS, WWS, W, WWN, NW and NNW); U is the mean wind speed in each speed category with an effective wind speed greater than or euqal to the threshold wind speed Ut at 10 m height; t is the percentage of time during which the effective wind speed exceeds Ut. A 2 m s-1 bin is used to classify effective wind speeds ≥5.3 m s-1 (or ≥5.8 m s-1) for each direction, generating the corresponding speed categories, which are associated with mean wind speeds of 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32 and 33 m s-1 (7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 and 32 m s-1). The sum of these bins represents the final DP for each wind direction. Although DP could be calculated using wind speeds in m s-1, we express the mean wind speeds in knots to avoid recalibrating the wind energy environment classification (low energy, <200 VU; intermediate energy, ≥200 VU and <400 VU; high energy, ≥400 VU) developed by Fryberger. The conversion factor used is 1 knot = 0.5144 m s-1. 
 
-where i represents the 16 wind directions: N, NNE, NE, NEE, E, EES, ES, ESS, S, SSW, WS, WWS, W, WWN, NW and NNW; U is the effective wind speed, which is ≥5.3 m s-1 and ≥5.8 m s-1 at 10 m height; Ut = 5.3 m s-1 and Ut = 5.8 m s-1 are the threshold wind speeds; t is the percentage of time during which the wind speed exceeds Ut. A 2 m s-1 bin is adopted for each direction of effective wind speeds ≥5.3 m s-1 (or ≥5.8 m s-1), corresponding to mean wind speeds of 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32 and 33 m s-1 (7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31 and 32 m s-1), and the sum of these bins represents the final DP in each wind direction. Although the DP could be calculated using wind speeds in m s-1, we have expressed the mean wind speeds in knots to avoid recalibrating the classification of wind energy environments (low energy, <200 VU; intermediate energy, ≥200 VU and <400 VU; high energy, ≥400 VU) developed by Fryberger. The conversion factor used is 1 knot = 0.5144 m s-1. The obtained DPs in the 16 wind directions are projected onto the due-east (RDP_E) and due-north (RDP_N) directions to calculate the RDP, RDD and WDV: 
+The obtained DPs in the 16 wind directions are projected onto the due-east (RDP_E) and due-north (RDP_N) directions to calculate the RDP, RDD and WDV: 
 
 RDP=sqrt(RDP_E^2+RDP_N^2)
 
