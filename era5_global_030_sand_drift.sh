@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# Author : Guoshuai Li
+# Contact: GUOSHUAI Li  <liguoshuai@outlook.com> <liguoshuai@lzb.ac.cn>
+# Copyright (C) 2025
+
 #common_year
 for ((common=1940; common<=2023;++common))
 do
